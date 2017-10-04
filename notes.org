@@ -1,0 +1,110 @@
+* Videos:
+- /Users/sdave/online-courses/udacity/intro-to-machine-learning
+* Notes for Udacity Machine Learning.
+** QUIZES
+- Videos 36 to 38 has a quiz in it which needs the web, so go over
+  that quiz when internet is available.
+- Video 43 talks about Bayes rule and has a quiz.
+- Vieo 66 talks about mini project for identifying emails with
+  authors. Vieo was not downloaded completely. Identify what's
+  missing.
+- Video 100 talks about SVM kernels and has a quiz.
+- Video "122- Coding Descision Trees" requires you to code using
+  descision trees.
+
+** Use documentation for sklearn (google it) to code in python.
+** Learn about statistics and probablistic inference. Udacity offers this course.
+
+* Machine Learning
+** Notes:
+- Stop over fitting!
+  - overfitting is when you take your data points too literally and
+    produce a complex dicision tree over a simpler one. Example
+    availabe in video "105 Overfitting"
+  - What you should do is save 10% of your data as test data and test
+    with it to see how well your algorithm performs.
+*TODO*  Video 171 to 176  - choose your own alogrithim and purse it on your own
+** Supervisied Classifications
+- What is it?
+  - Learning from previously classified data.
+  - Examples:
+    1. From tagged photos of a person, recommend tags for new pictures
+    2. From previosuly watched netflix movies, select new movies to watch.
+- Decision Surface:
+  - On a scatter plot draw a line which seperates good data from bad
+    data.
+- Types of Supervised Classifications:
+  1. Naive Bayes
+     1. Strengths:
+        - Easy to Implement.
+        - Simple and efficent
+     2. Weakness:
+        - doesn't understand context.
+     3. Notes:
+        - Don't treat Classifications algorithims as black boxes.
+          Understand the problem and see if the algorithm applies to
+          that problem.
+  2. SVM :- Support Vector Machines.
+     1. Strengths:
+        - It truly ignores outliers.
+        - Effective in high dimensional spaces.
+        - Still effective in spaces where number of features
+          (dimensions) is greater than number of samples.
+        - Uses a subset of training points in decision function
+          (called support vectors); it is also memory efficient.
+        - Versatile. Different kernel functions can be specified for
+          descision functions. Common kernels are provided but can
+          also write your own.
+     2. Weakness:
+        - If the number of features is much greater than the number of
+          samples, the method is likely to give poor performance.
+        - SVMs do not provide probability estimates. THey can be
+          calculated but it's expensive.
+        - Don't perform well with noisy data.
+     3. Notes:
+        - SVM creates a hyperplane (line)  which seperates two classes of data
+          as best as you can.
+        - It maximizes MARGIN. MARGIN is the maximum distance to the
+          nearest points of both classes relative to the hyperplane.
+        - Greater the margin the better.
+        - Uses "kernel" tricks and features to create dicision
+          boundries. Video 97 really explains this.
+        - Adds more dimensions to convert a non-linear seperation into
+          a linear seperation.
+        - SVC :- Support vector Classifier
+  3. Descision Trees
+     1. Strengths:
+        1. Simple to understand
+        2. Easy to look at the data beause descision trees are very descriptive.
+     2. Weakness:
+        1. Prone to overfitting.
+        2.
+     3. Notes:
+        - Entropy :-
+          - Controls how the descision tree decides where to split
+            the data.
+          - measure of IMPURITY in a bunch of examples.
+          - Math Formula: Sum of [- Pi*log2(Pi)]
+        - Information Gain :- (entropy of parent) - (weighted
+          average of entropy of the children).
+        - Maximum values of entropy is 1.
+        - Descision tree will try to maximize "Information Gain"
+        - Bias Variance (learn what it is)
+* Questions
+1. For Classifications, can you have more than one decision surface?
+2. Where do i get the data for the sklearn examples? (check the online
+   videos they might have it in the resources section. don't have
+   internet right now so can't check.)
+3. In the informatio nGain examples (descision tree videos) why did we
+   decide that the parent is "Speed" feature.
+
+
+
+
+* Some sample notes
+- Pi (not pie 3.14) :- fraction of examples/samples in class i.
+- all examples are of the same class ->> entropy = 0.
+- examples are evenly split between classes ->> entropy = 1.
+-
+- How entropy affects how a descision tree draws it's boundries.
+- Descision tree algorithm will try to mazimize information gain
